@@ -1,5 +1,4 @@
 package com.adepuu.exercises.session5;
-import java.util.List;
 
 public class Exercise3 {
     /**
