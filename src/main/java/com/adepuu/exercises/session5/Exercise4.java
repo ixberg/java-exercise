@@ -21,16 +21,19 @@ public class Exercise4 {
 
     public static int[] removeDuplicates(int[] array) {
         int n = array.length;
-        Arrays.sort(array);
-
         int[] uniqueArray = new int[n];
-        uniqueArray[0] = array[0];
-        int currentIndex = 1;
+        int currentIndex = 0;
 
-        for (int i = 1; i < n; i++) {
-            if (array[i] != array[i - 1]) {
-                uniqueArray[currentIndex] = array[i];
-                currentIndex++;
+        for (int i = 0; i < n; i++) {
+            boolean isDuplicate = false;
+            for (int j = 0; j < i; j++) {
+                if (array[i] == array[j]) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+            if (!isDuplicate) {
+                uniqueArray[currentIndex++] = array[i];
             }
         }
         return Arrays.copyOf(uniqueArray, currentIndex);
