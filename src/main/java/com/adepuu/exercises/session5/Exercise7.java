@@ -19,6 +19,10 @@ public class Exercise7 {
         String s2 = "nagaram";
         System.out.println("Output: " + isAnagram(s1, s2));
 
+        String s3 = "djwo!2";
+        String s4 = "jd!2w1o";
+        System.out.println("Output: " + isAnagram(s3, s4));
+
     }
     public static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) return false;

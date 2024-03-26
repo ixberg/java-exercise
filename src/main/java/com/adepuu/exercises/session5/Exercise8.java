@@ -16,7 +16,14 @@ public class Exercise8 {
      * Input: nums = [1]
      * Output: []
      */
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
+        System.out.println("test");
+
+    }
+    static void funcD{
+        int result = 0;
+        int[] arr = {1,2,3};
+        System.out.println();
     }
 }
