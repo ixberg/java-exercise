@@ -1,5 +1,7 @@
 package com.adepuu.exercises.session5;
 
+import java.util.Arrays;
+
 public class Exercise7 {
     /**
      * Java String Program to Check Anagram
@@ -13,10 +15,21 @@ public class Exercise7 {
      * Output: false
      */
     public static void main(String[] args) {
+        String s1 = "anagram";
+        String s2 = "nagaram";
+        System.out.println("Output: " + isAnagram(s1, s2));
 
     }
-    public boolean isAnagram(String s, String t) {
+    public static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) return false;
+
+        char[] sArray = s.toCharArray();
+        char[] tArray = t.toCharArray();
+
+        Arrays.sort(sArray);
+        Arrays.sort(tArray);
+
+        return Arrays.equals(sArray, tArray);
 
     }
 }
